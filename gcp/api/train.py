@@ -13,7 +13,7 @@ from sklearn.metrics import accuracy_score
 
 
 ########### GET DATA #######################
-df = pd.read_csv('/Users/andrewcosta/Desktop/dse-hackathon/titanic/train.csv')
+df = pd.read_csv('../data/train.csv')
 
 features = ["Pclass", "Sex", "SibSp", "Parch"]
 X = pd.get_dummies(train_df[features])
@@ -43,5 +43,5 @@ accuracy = accuracy_score(y_val, predictions)
 
 ########### SAVE MODEL #######################
 
-filename = '/content/drive/MyDrive/titanic/model.pkl'
+filename = 'model.pkl'
 pickle.dump(pipeline, open(filename, 'wb'))
