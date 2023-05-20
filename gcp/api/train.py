@@ -16,8 +16,8 @@ from sklearn.metrics import accuracy_score
 df = pd.read_csv('../data/train.csv')
 
 features = ["Pclass", "Sex", "SibSp", "Parch"]
-X = pd.get_dummies(train_df[features])
-y = train_df["Survived"]
+X = pd.get_dummies(df[features])
+y = df["Survived"]
 
 
 ########### SPLIT DATA ######################
